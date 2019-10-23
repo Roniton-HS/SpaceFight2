@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e792633c-655f-4b4f-9917-b07a7ab667f8" name="Default Changelist" comment="" />
+    <list default="true" id="e792633c-655f-4b4f-9917-b07a7ab667f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SpaceFight2/textures/menuWorld.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/textures/menuWorld.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/MenuWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/MenuWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/textures/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/textures/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/GameWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/MenuWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/MenuWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/display/HealthBar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/display/HealthBar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +34,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1022" />
-    <option name="y" value="-18" />
-    <option name="width" value="1522" />
-    <option name="height" value="996" />
-  </component>
   <component name="ProjectId" id="1Q9Bsy51uleg5tjDjzvYkixa8N8" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -35,9 +42,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Workspace\SpaceFight2\res\textures" />
-      <recent name="D:\Workspace\SpaceFight2\res" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Worlds" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -45,8 +51,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="entities" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Worlds" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\SpaceFight2\res\textures" />
+      <recent name="D:\Workspace\SpaceFight2\res" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,7 +95,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

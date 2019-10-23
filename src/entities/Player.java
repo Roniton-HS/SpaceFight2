@@ -1,8 +1,11 @@
 package entities;
 
+import Worlds.GameWorld;
+import Worlds.MenuWorld;
 import gfx.ImageLoader;
 import main.ArrayLists;
 import main.Game;
+import main.World;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -23,7 +26,7 @@ public class Player extends Creature {
         super(x, y);
         this.x = x;
         this.y = y;
-        health = 10;
+        health = 2;
         image = ImageLoader.loadImage("/textures/player.png");
         this.game = game;
     }
@@ -35,6 +38,7 @@ public class Player extends Creature {
     public void tick() {
         input();
         checkEnemy();
+        die();
     }
 
     /**
@@ -114,14 +118,22 @@ public class Player extends Creature {
      */
     private void fire() {
         if (System.currentTimeMillis() - pause > 100) {
-            Bullet z = new Bullet(game, x, y);
+            Bullet z = new Bullet(game, x + 29, y + 40);
             ArrayLists.bullets.add(z);
 
-            Bullet j = new Bullet(game, x + 100, y);
+            Bullet j = new Bullet(game, x + 66, y + 40);
             ArrayLists.bullets.add(j);
 
             pause = System.currentTimeMillis();
 
+        }
+    }
+
+    public void die(){
+        if(health <= 0){
+            MenuWorld menuWorld = new MenuWorld(game);
+            World.setWorld(menuWorld);
+            GameWorld.resetWorld();
         }
     }
 }

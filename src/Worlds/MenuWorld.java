@@ -1,16 +1,22 @@
 package Worlds;
 
+import gfx.ImageLoader;
 import main.Game;
 import main.World;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class MenuWorld extends World {
+
+    private BufferedImage Image; //background image
+
     /**
-     *  Constructor
+     * Constructor
      */
     public MenuWorld(Game game) {
         super(game);
+        Image = ImageLoader.loadImage("/textures/menuWorld.png");
     }
 
     /**
@@ -29,6 +35,7 @@ public class MenuWorld extends World {
      */
     @Override
     public void render(Graphics g) {
-
+//render background
+        g.drawImage(Image, 0, 0, null);
     }
 }

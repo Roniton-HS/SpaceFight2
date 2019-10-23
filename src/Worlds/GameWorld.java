@@ -26,7 +26,7 @@ public class GameWorld extends World {
      */
     public GameWorld(Game game) {
         super(game);
-        Image = ImageLoader.loadImage("/textures/startScreen.png");
+        Image = ImageLoader.loadImage("/textures/spaceBack.jpg");
         player = new Player(game, 100, 500);
         healthBar = new HealthBar();
         for (int i = 0; i < 4; i++) {
@@ -104,7 +104,7 @@ public class GameWorld extends World {
     /**
      * Resets World
      */
-    public void resetWorld() {
+    public static void resetWorld() {
         ArrayLists.enemies.clear();
         ArrayLists.bullets.clear();
     }

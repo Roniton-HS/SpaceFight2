@@ -34,8 +34,6 @@ public class Enemy extends Entity {
     @Override
     public void render(Graphics g) {
         g.drawImage(image, (int) x, (int) y, enemyWidth, enemyHeight, null);
-        g.setColor(Color.RED);
-        g.drawRect((int) x + 16, (int) y + 32, 10, 10);
     }
 
     private void move() {
