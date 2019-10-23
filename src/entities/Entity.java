@@ -12,7 +12,5 @@ public abstract class Entity {
 
     public abstract void tick();
 
-    public void nicoIstCool(){}
-
     public abstract void render(Graphics g);
 }
