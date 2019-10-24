@@ -95,8 +95,8 @@ public class GameWorld extends World {
     public void checkEnemies(){
         ArrayList enemies = ArrayLists.getEnemies();
         if(enemies.isEmpty()){
-            MenuWorld menuWorld = new MenuWorld(game);
-            World.setWorld(menuWorld);
+            VictoryWorld victoryWorld = new VictoryWorld(game);
+            World.setWorld(victoryWorld);
             resetWorld();
         }
     }
