@@ -7,11 +7,11 @@ import main.Game;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Bullet extends MainBullet {
+public class EnemyBullet extends MainBullet {
 
     private BufferedImage image;
 
-    public Bullet(Game game, float x, float y) {
+    public EnemyBullet(Game game, float x, float y) {
         super(x, y);
 
         this.x = x;
@@ -40,9 +40,9 @@ public class Bullet extends MainBullet {
      * moves forward an disappears at the bottom
      */
     public void move() {
-        y -= 10;
+        y += 10;
         if (y <= -100 || y >= 1100) {
-            ArrayLists.bullets.remove(this);
+            ArrayLists.enemyBullets.remove(this);
         }
     }
 

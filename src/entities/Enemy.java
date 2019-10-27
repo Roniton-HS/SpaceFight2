@@ -11,14 +11,15 @@ import java.util.ArrayList;
 public class Enemy extends Entity {
 
     private BufferedImage image;
-
-    private int speed = 0;
+    private Game game; // Game Object
+    private int speed = 1;
+    private long pause = System.currentTimeMillis();
 
     private int enemyWidth = 128, enemyHeight = 128; // size of the Enemy
 
     public Enemy(Game game, float x, float y) {
         super(x, y);
-
+        this.game = game;
         this.x = x;
         this.y = y;
         image = ImageLoader.loadImage("/textures/enemy.png");
@@ -29,6 +30,7 @@ public class Enemy extends Entity {
     public void tick() {
         move();
         checkBullet();
+        fire();
     }
 
     @Override
@@ -58,6 +60,13 @@ public class Enemy extends Entity {
         }
     }
 
+    public void fire() {
+        if (System.currentTimeMillis() - pause > 1000) {
+            EnemyBullet z = new EnemyBullet(game, x, y);
+            ArrayLists.enemyBullets.add(z);
+            pause = System.currentTimeMillis();
+        }
+    }
 
     /**
      * getter/setters
