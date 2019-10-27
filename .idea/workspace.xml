@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e792633c-655f-4b4f-9917-b07a7ab667f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/entities/EnemyBullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/MainBullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Bullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Bullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/main/ArrayLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/main/ArrayLists.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Worlds/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/GameWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Bullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ArrayLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ArrayLists.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

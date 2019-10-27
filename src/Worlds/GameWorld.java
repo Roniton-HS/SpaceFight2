@@ -22,7 +22,7 @@ public class GameWorld extends World {
     private HealthBar healthBar; //Healthbar object
     private int backgroundCounter = 0; //Counter for the background
     private long enemyCounter = System.currentTimeMillis();
-    private int enemyType = 0;
+    private int enemyWaveCounter;
 
 
     /**
@@ -33,8 +33,7 @@ public class GameWorld extends World {
         Image = ImageLoader.loadImage("/textures/spaceBack.jpg");
         player = new Player(game, 100, 500);
         healthBar = new HealthBar();
-        Enemy z = new Enemy(game, H.getRandomNumber(0, 700), -100);
-        ArrayLists.enemies.add(z);
+        spawnWave(1, 0);
     }
 
 
@@ -44,7 +43,7 @@ public class GameWorld extends World {
     @Override
     public void tick() {
         //spawns Enemies
-        spawnEnemy();
+        spawnWave(5, 5000);
 
         //sets MenuWorld if there are no Enemies left
         checkEnemies();
@@ -126,34 +125,107 @@ public class GameWorld extends World {
         }
     }
 
-    private void spawnEnemy() {
-        int x = 0;
+    public void spawnEnemy() {
+        spawnWave(enemyWaveCounter, 3000);
+        enemyWaveCounter++;
 
-            switch (enemyType) {
-                case 0:
-                    if ((System.currentTimeMillis() - enemyCounter) > 3000) {
-                        enemyCounter = System.currentTimeMillis();
-                        for (int i = 0; i < 4; i++) {
-
-                            Enemy z = new Enemy(game, x, -100);
-                            x = x + 200;
-                            if (x == 700) {
-                                x = 0;
-                            }
-                            ArrayLists.enemies.add(z);
-                        }
-                        enemyType = 1;
-                    }
-                    break;
-                case 1:
-                    if ((System.currentTimeMillis() - enemyCounter) > 1000) {
-                        Enemy z = new Enemy(game, H.getRandomNumber(0, 700), -100);
-                        ArrayLists.enemies.add(z);
-                        enemyType = 0;
-                    }
-                    break;
-            }
     }
+
+    private void spawnWave(int wave, int delay) {
+        int x = 50;
+        int y = -500;
+        switch (wave) {
+
+            case 0: //vertical line
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 6; i++) {
+
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        x = x + 112;
+                        if (x > 672) {
+                            x = 50;
+                        }
+                    }
+                }
+                break;
+
+            case 1: // V
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    x = 115;
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 5; i++) {
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        x = x + 112;
+                        if (i < 2) {
+                            y = y + 87;
+                        } else {
+                            y = y - 87;
+                        }
+                    }
+                }
+                break;
+
+            case 2: // line
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    x = 272;
+                    y = -1050;
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 5; i++) {
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        y = y + 110;
+                    }
+                }
+                break;
+
+            case 3: // tilted line left
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    x = 115;
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 5; i++) {
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        y = y + 87;
+                        x = x + 112;
+                    }
+                }
+                break;
+
+            case 4: // tilted line right
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    x = 557;
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 5; i++) {
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        y = y + 87;
+                        x = x - 112;
+                    }
+                }
+                break;
+
+            case 5: // reverted V
+                if ((System.currentTimeMillis() - enemyCounter) > delay) {
+                    x = 115;
+                    enemyCounter = System.currentTimeMillis();
+                    for (int i = 0; i < 5; i++) {
+                        Enemy z = new Enemy(game, x, y);
+                        ArrayLists.enemies.add(z);
+                        x = x + 112;
+                        if (i < 2) {
+                            y = y - 87;
+                        } else {
+                            y = y + 87;
+                        }
+                    }
+                }
+                break;
+        }
+    }
+
 
     /**
      * Resets World

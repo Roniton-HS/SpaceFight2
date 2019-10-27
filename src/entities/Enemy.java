@@ -12,7 +12,7 @@ public class Enemy extends Entity {
 
     private BufferedImage image;
     private Game game; // Game Object
-    private int speed = 1;
+    private int speed = 3;
     private long pause = System.currentTimeMillis();
 
     private int enemyWidth = 128, enemyHeight = 128; // size of the Enemy
