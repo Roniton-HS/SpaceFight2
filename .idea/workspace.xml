@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e792633c-655f-4b4f-9917-b07a7ab667f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Worlds/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/GameWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
