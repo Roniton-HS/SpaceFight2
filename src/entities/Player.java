@@ -38,6 +38,7 @@ public class Player extends Creature {
     public void tick() {
         input();
         checkEnemy();
+        checkEnemyBullet();
         die();
     }
 
@@ -108,6 +109,21 @@ public class Player extends Creature {
                     || EnemyLeftX > x && EnemyLeftX < x + playerWidth
                     && EnemyLeftY > y && EnemyLeftY < y + playerWidth) {
                 ArrayLists.enemies.remove(m);
+                health--;
+            }
+        }
+    }
+
+    private void checkEnemyBullet(){
+        float BulletX, BulletY;
+        ArrayList enemyBullets = ArrayLists.getEnemyBullets();
+        for (int w = 0; w < enemyBullets.size(); w++) {
+            EnemyBullet m = (EnemyBullet) enemyBullets.get(w);
+            BulletX = m.getX() + 16;
+            BulletY = m.getY() + 16;
+            if (BulletX > x && BulletX < x + playerWidth && BulletY > y && BulletY < y + playerWidth) {
+                ArrayLists.enemyBullets.remove(m);
+                System.out.println("halp");
                 health--;
             }
         }

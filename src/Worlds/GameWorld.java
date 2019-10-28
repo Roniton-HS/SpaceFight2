@@ -33,7 +33,8 @@ public class GameWorld extends World {
         Image = ImageLoader.loadImage("/textures/spaceBack.jpg");
         player = new Player(game, 100, 500);
         healthBar = new HealthBar();
-        spawnWave(1, 0);
+        spawnWave(0, 0);
+        enemyWaveCounter++;
     }
 
 
@@ -43,7 +44,7 @@ public class GameWorld extends World {
     @Override
     public void tick() {
         //spawns Enemies
-        spawnWave(5, 5000);
+        spawnEnemy();
 
         //sets MenuWorld if there are no Enemies left
         checkEnemies();
@@ -126,9 +127,11 @@ public class GameWorld extends World {
     }
 
     public void spawnEnemy() {
-        spawnWave(enemyWaveCounter, 3000);
+        spawnWave(enemyWaveCounter, 5000);
         enemyWaveCounter++;
-
+        if(enemyWaveCounter == 5){
+            enemyWaveCounter = 0;
+        }
     }
 
     private void spawnWave(int wave, int delay) {
@@ -136,7 +139,7 @@ public class GameWorld extends World {
         int y = -500;
         switch (wave) {
 
-            case 0: //vertical line
+            case 0: // line
                 if ((System.currentTimeMillis() - enemyCounter) > delay) {
                     enemyCounter = System.currentTimeMillis();
                     for (int i = 0; i < 6; i++) {
@@ -168,7 +171,7 @@ public class GameWorld extends World {
                 }
                 break;
 
-            case 2: // line
+            case 2: // vertical line
                 if ((System.currentTimeMillis() - enemyCounter) > delay) {
                     x = 272;
                     y = -1050;
