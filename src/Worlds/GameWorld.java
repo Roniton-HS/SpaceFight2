@@ -1,6 +1,7 @@
 package Worlds;
 
 import display.HealthBar;
+import display.Score;
 import entities.Bullet;
 import entities.Enemy;
 import entities.EnemyBullet;
@@ -23,6 +24,7 @@ public class GameWorld extends World {
     private int backgroundCounter = 0; //Counter for the background
     private long enemyCounter = System.currentTimeMillis();
     private int enemyWaveCounter;
+    private Score score;
 
 
     /**
@@ -35,6 +37,7 @@ public class GameWorld extends World {
         healthBar = new HealthBar();
         spawnWave(0, 0);
         enemyWaveCounter++;
+        score = new Score(50, 980);
     }
 
 
@@ -43,17 +46,22 @@ public class GameWorld extends World {
      */
     @Override
     public void tick() {
+        checkScore();
+
         //spawns Enemies
         spawnEnemy();
 
         //sets MenuWorld if there are no Enemies left
-        checkEnemies();
+        //checkEnemies();
 
         //tick Player
         player.tick();
 
         //tick healthBar
         healthBar.tick();
+
+        //tick Score
+        score.tick();
 
         //tick Bullet
         ArrayList bullets = ArrayLists.getBullets();
@@ -93,7 +101,11 @@ public class GameWorld extends World {
         //render player
         player.render(g);
 
+        //render HealthBar
         healthBar.render(g);
+
+        //render Score
+        score.render(g);
 
         //render bullets
         ArrayList bullets = ArrayLists.getBullets();
@@ -229,6 +241,14 @@ public class GameWorld extends World {
         }
     }
 
+    public void checkScore(){
+        if(Score.score == 50){
+            Score.score = 0;
+            VictoryWorld victoryWorld = new VictoryWorld(game);
+            World.setWorld(victoryWorld);
+            resetWorld();
+        }
+    }
 
     /**
      * Resets World

@@ -1,5 +1,6 @@
 package entities;
 
+import display.Score;
 import gfx.ImageLoader;
 import main.ArrayLists;
 import main.Game;
@@ -30,7 +31,7 @@ public class Enemy extends Entity {
     public void tick() {
         move();
         checkBullet();
-        fire();
+        //fire();
     }
 
     @Override
@@ -54,8 +55,9 @@ public class Enemy extends Entity {
             BulletY = m.getY();
             if (BulletX > x && BulletX < x + enemyWidth
                     && BulletY > y && BulletY < y + enemyHeight) {
-                ArrayLists.enemies.remove(this);
+                Score.score++;
                 ArrayLists.bullets.remove(m);
+                ArrayLists.enemies.remove(this);
             }
         }
     }

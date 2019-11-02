@@ -10,6 +10,7 @@ import java.awt.image.BufferedImage;
 public class MenuWorld extends World {
 
     private BufferedImage Image; //background image
+    private boolean wait = false;
 
     /**
      * Constructor
@@ -17,6 +18,7 @@ public class MenuWorld extends World {
     public MenuWorld(Game game) {
         super(game);
         Image = ImageLoader.loadImage("/textures/menuWorld.png");
+        wait = false;
     }
 
     /**
@@ -24,7 +26,11 @@ public class MenuWorld extends World {
      */
     @Override
     public void tick() {
-        if (game.getKeyHandler().enter) {
+        if (!game.getKeyHandler().enter) {
+            wait = true;
+        }
+
+        if (wait && game.getKeyHandler().enter) {
             GameWorld gameWorld = new GameWorld(game);
             World.setWorld(gameWorld);
         }

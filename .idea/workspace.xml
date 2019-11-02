@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SpaceFight2:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e792633c-655f-4b4f-9917-b07a7ab667f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SpaceFight2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/textures/defeatScreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/textures/winScreen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/display/Score.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/DefeatWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/DefeatWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/GameWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/MenuWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/MenuWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/VictoryWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/Worlds/VictoryWorld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceFight2/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/DefeatWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/DefeatWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/GameWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/GameWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/MenuWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/MenuWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Worlds/VictoryWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Worlds/VictoryWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,14 +49,15 @@
   <component name="ProjectId" id="1Q9Bsy51uleg5tjDjzvYkixa8N8" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Worlds" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\SpaceFight2\res\textures" />
+      <recent name="D:\Workspace\SpaceFight2\res" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -42,9 +65,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="entities" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Workspace\SpaceFight2\res\textures" />
-      <recent name="D:\Workspace\SpaceFight2\res" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Worlds" />
     </key>
   </component>
   <component name="RunDashboard">

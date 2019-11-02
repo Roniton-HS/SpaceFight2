@@ -1,7 +1,8 @@
 package entities;
 
+import Worlds.DefeatWorld;
 import Worlds.GameWorld;
-import Worlds.MenuWorld;
+import display.Score;
 import gfx.ImageLoader;
 import main.ArrayLists;
 import main.Game;
@@ -18,6 +19,7 @@ public class Player extends Creature {
     private static float x, y; // x and y Coordinates of the Player
     private long pause = System.currentTimeMillis();
     private int playerWidth = 128, playerHeight = 128; // size of the Player
+    private int speed = 5;
 
     /**
      * Constructor
@@ -26,7 +28,7 @@ public class Player extends Creature {
         super(x, y);
         this.x = x;
         this.y = y;
-        health = 2;
+        health = 4;
         image = ImageLoader.loadImage("/textures/player.png");
         this.game = game;
     }
@@ -58,19 +60,19 @@ public class Player extends Creature {
         //MOVE
         if (game.getKeyHandler().w) {
             if (y >= 3)
-                y -= 3;
+                y -= speed;
         }
         if (game.getKeyHandler().a) {
             if (x >= 3)
-                x -= 3;
+                x -= speed;
         }
         if (game.getKeyHandler().s) {
             if (y < game.height - playerHeight)
-                y += 3;
+                y += speed;
         }
         if (game.getKeyHandler().d) {
             if (x < game.width - playerWidth)
-                x += 3;
+                x += speed;
         }
         //SHOOT
         if (game.getKeyHandler().up) {
@@ -115,13 +117,14 @@ public class Player extends Creature {
     }
 
     private void checkEnemyBullet(){
+        int offset = 30;
         float BulletX, BulletY;
         ArrayList enemyBullets = ArrayLists.getEnemyBullets();
         for (int w = 0; w < enemyBullets.size(); w++) {
             EnemyBullet m = (EnemyBullet) enemyBullets.get(w);
             BulletX = m.getX() + 16;
             BulletY = m.getY() + 16;
-            if (BulletX > x && BulletX < x + playerWidth && BulletY > y && BulletY < y + playerWidth) {
+            if (BulletX > x + offset && BulletX < x + playerWidth - offset && BulletY + offset > y && BulletY - offset < y + playerWidth) {
                 ArrayLists.enemyBullets.remove(m);
                 System.out.println("halp");
                 health--;
@@ -147,9 +150,10 @@ public class Player extends Creature {
 
     public void die(){
         if(health <= 0){
-            MenuWorld menuWorld = new MenuWorld(game);
-            World.setWorld(menuWorld);
+            DefeatWorld defeatWorld = new DefeatWorld(game);
+            World.setWorld(defeatWorld);
             GameWorld.resetWorld();
+            Score.score = 0;
         }
     }
 }
